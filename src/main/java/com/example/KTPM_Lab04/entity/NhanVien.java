@@ -1,4 +1,4 @@
-package com.example.KTPM_Lab04_entity;
+package com.example.KTPM_Lab04.entity;
 
 import java.io.Serializable;
 
@@ -25,16 +25,16 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "maybay")
-public class MayBay implements Serializable {
+@Table(name = "nhanvien")
+public class NhanVien implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "MaMB")
-	private Integer maMB;
+	@Column(name = "MaNV")
+	private String maNV;
 	
-	@Column(name = "Loai")
-	private String loai;
+	@Column(name = "Ten")
+	private String ten;
 	
-	@Column(name = "TamBay")
-	private Integer tamBay;
+	@Column(name = "Luong")
+	private Integer luong;
 }

@@ -1,4 +1,4 @@
-package com.example.KTPM_Lab04_entity;
+package com.example.KTPM_Lab04.entity;
 
 import java.io.Serializable;
 

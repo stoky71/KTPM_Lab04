@@ -1,4 +1,4 @@
-package com.example.KTPM_Lab04_entity;
+package com.example.KTPM_Lab04.entity;
 
 import java.io.Serializable;
 
@@ -29,7 +29,7 @@ import lombok.ToString;
 public class ChungNhan implements Serializable{
 	@Id
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "MaCB", referencedColumnName = "MaCB", insertable = false, updatable = false)
+	@JoinColumn(name = "MaNV", referencedColumnName = "MaNV", insertable = false, updatable = false)
 	private NhanVien nhanVien;
 	
 	@Id

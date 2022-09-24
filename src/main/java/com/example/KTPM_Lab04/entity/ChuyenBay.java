@@ -1,6 +1,7 @@
-package com.example.KTPM_Lab04_entity;
+package com.example.KTPM_Lab04.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,16 +26,29 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "nhanvien")
-public class NhanVien implements Serializable{
+@Table(name = "chuyenbay")
+public class ChuyenBay implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "MaNV")
-	private String maNV;
+	@Column(name = "MaCB")
+	private String maCB;
 	
-	@Column(name = "Ten")
-	private String ten;
+	@Column(name = "GaDi")
+	private String gaDi;
 	
-	@Column(name = "Luong")
-	private Integer luong;
+	@Column(name = "GaDen")
+	private String gaDen;
+	
+	@Column(name = "DoDai")
+	private Integer doDai;
+	
+	@Column(name = "GioDi")
+	private Date gioDi;
+	
+	@Column(name = "GioDen")
+	private Date gioDen;
+	
+	@Column(name = "ChiPhi")
+	private Integer chiPhi;
+	
 }
