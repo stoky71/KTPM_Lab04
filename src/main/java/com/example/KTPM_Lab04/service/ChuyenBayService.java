@@ -1,6 +1,6 @@
 package com.example.KTPM_Lab04.service;
 
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,5 +23,17 @@ public class ChuyenBayService {
 	
 	public void ChuyenBayDenDAD(){
 		chuyenBayRepo.findChuyenBaystoGaDiDAD().forEach(System.out::println);
+	}
+	
+	public void getChuyenBayDoDaiHon8kVaNhoHon10k() {
+		chuyenBayRepo.findChuyenBayDoDaiHon8VaNhoHon10().forEach(System.out::println);
+	}
+	
+	public void getChuyenBayTuSGToiBMT() {
+		chuyenBayRepo.findChuyenBaySGtoBMT().forEach(System.out::println);
+	}
+	
+	public int getChuyenBayTuSGN(){
+		return chuyenBayRepo.countChuyenBayFromSGN();
 	}
 }
